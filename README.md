@@ -1,27 +1,27 @@
 # fullstack-engineer-practical
-Setel-Engineering-Test
+Setel-Engineering-Test-Assessment-2020 for Grade 4 Full Stack Engineer - R. Aidy
 <!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
+*** Please fork this repo and create a pull request or simply open
+*** Thanks again! Setel@Engineering you guys Bizzare AMAZING! :D
 -->
 
 
 
 
 
-<!-- PROJECT SHIELDS -->
+<!-- REQUIREMENT -->
 <!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+*** Node.js version 8+
+*** Docker Desktop
+*** PostGres Ver3+
+*** During the npm install phase, the below following dependencies will be installed:
+*** TypeScript, a superset of JavaScript with static typing
+*** TypeORM, an Object Relational Mapper for TypeScript and JavaScript
+*** NestJS, a Node.js framework for building server-side applications
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+[![NodeJS][contributors-shield]][https://nodejs.org/]
+[![Docker][forks-shield]][forks-https://]
+[![Jest-Unit-Testing][stars-shield]][stars-https://www.npmjs.com/package/jest]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
