@@ -1,11 +1,11 @@
-# fullstack-engineer-practical
+# Fullstack Engineering Practical
 Setel-Engineering-Test-Assessment-2020 for Grade 4 Full Stack Engineer - R. Aidy
-# Build a blog using Nest.js, TypeScript, React and MongoDB
+## Build using Nest.js, TypeScript, React and MongoDB
 
-Application repo for a simple blog application built with Nest.js, TypeScript, React and MongoDB.
+Application repo for a orders application built with Nest.js, TypeScript, React and MongoDB.
 
 ## Getting Started
-This prototype is divided into two separate sections. Namely the Backend ( Built with Nest.js) and the frontend
+This app is divided into two separate sections. Namely the Backend ( Built with Nest.js) and the frontend
 ( Built with React ).
 
 Install TypeScript globally on your machine if you don't have it installed already:
@@ -48,8 +48,8 @@ touch .env
 Open the newly created file and add the following code:
 
 ```
-AUTH0_DOMAIN=YOUR_AUTH0_DOMAIN
-AUTH0_AUDIENCE=YOUR_AUTH0_AUDIENCE
+AUTH0_DOMAIN=YOUR_DOMAIN
+AUTH0_AUDIENCE=YOUR_AUDIENCE
 ```
 
 Ensure that you replace the `YOUR_AUTH0_DOMAIN` and `YOUR_AUTH0_AUDIENCE` placeholder with the appropriate credentials as obtained from your Auth0 dashboard.
@@ -65,7 +65,7 @@ sudo mongod
 ```
 
 ### Run the application
-Open another terminal and still within the `blog-backend` project directory run the application with:
+Open another terminal and still within the `backend` project directory run the application with:
 
 ```bash
 npm run start:dev
@@ -75,18 +75,18 @@ This will start the backend application on port `5000`. This was modified to avo
 
 
 ## Frontend
-Open another terminal from the `nest-react-project` and navigate to the `blog-frontend` folder to setup the frontend
+Open another terminal from the `nest-react-project` and navigate to the `orders` folder to setup the frontend
 
 ### Frontend dependencies
 ```bash
-cd blog-frontend
+cd orders
 npm install
 ```
 
 ### Run the frontend app
 
 ```bash
-npm start
+npm start or yarn | Soon done with all installation please run $ make build then $ make run-demo
 ```
 
 ### Create .env file and include Auth0 App credentials
@@ -94,7 +94,7 @@ npm start
 Create a `.env` file as shown here:
 
 ```
-touch .env
+ .env
 ```
 
 Open the file and paste the following code in it:
@@ -118,7 +118,7 @@ Finally open your browser and view the application on http://localhost:3000
 
 ## Built With
 [Nest.js]()
-[React.js]()
+[Marmelab React-Admin - React.js]()
 [Auth0]() 
 [TypeScript]()
 [MongoDB]()
