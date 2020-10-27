@@ -1,206 +1,124 @@
 # fullstack-engineer-practical
 Setel-Engineering-Test-Assessment-2020 for Grade 4 Full Stack Engineer - R. Aidy
-<!--
-*** Please fork this repo and create a pull request or simply open
-*** Thanks again! Setel@Engineering you guys Bizzare AMAZING! :D
--->
+# Build a blog using Nest.js, TypeScript, React and MongoDB
 
+Application repo for a simple blog application built with Nest.js, TypeScript, React and MongoDB.
 
-
-
-
-<!-- REQUIREMENT -->
-<!--
-*** Node.js version 8+
-*** Docker Desktop
-*** PostGres Ver3+
-*** During the npm install phase, the below following dependencies will be installed:
-*** TypeScript, a superset of JavaScript with static typing
-*** TypeORM, an Object Relational Mapper for TypeScript and JavaScript
-*** NestJS, a Node.js framework for building server-side applications
--->
-[![NodeJS][contributors-shield]][https://nodejs.org/]
-[![Docker][forks-shield]][forks-https://]
-[![Jest-Unit-Testing][stars-shield]][stars-https://www.npmjs.com/package/jest]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
+This prototype is divided into two separate sections. Namely the Backend ( Built with Nest.js) and the frontend
+( Built with React ).
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Install TypeScript globally on your machine if you don't have it installed already:
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
+```bash
+npm install -g typescript
 ```
 
-### Installation
+### Clone the repository
+To easily set up the application, clone this repository which contains directory for both sections of the project ( i.e `blog-backend` and `blog-frontend`)
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
+```bash
+git clone https://github.com/yemiwebby/nest-react-project.git
 ```
-3. Install NPM packages
-```sh
+
+## Change directory into the newly cloned project
+```bash
+cd nest-react-project
+```
+
+## Backend
+### Change directory into the backend
+```bash
+cd blog-backend
+```
+
+### Install backend dependencies
+
+```bash
 npm install
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+
+### Create .env file
+Once the installation process is complete, create a `.env` file:
+
+```bash
+touch .env
 ```
 
+Open the newly created file and add the following code:
+
+```
+AUTH0_DOMAIN=YOUR_AUTH0_DOMAIN
+AUTH0_AUDIENCE=YOUR_AUTH0_AUDIENCE
+```
+
+Ensure that you replace the `YOUR_AUTH0_DOMAIN` and `YOUR_AUTH0_AUDIENCE` placeholder with the appropriate credentials as obtained from your Auth0 dashboard.
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### MongoDB
+Ensure that you have mongoDB installed on your machine before running the application. I have this fully setup on my mac already.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Start mongoDB:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```bash
+sudo mongod
+```
 
+### Run the application
+Open another terminal and still within the `blog-backend` project directory run the application with:
 
+```bash
+npm run start:dev
+```
 
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This will start the backend application on port `5000`. This was modified to avoid confliction with the frontend application which by default will run on port `3000`
 
 
+## Frontend
+Open another terminal from the `nest-react-project` and navigate to the `blog-frontend` folder to setup the frontend
 
-<!-- LICENSE -->
-## License
+### Frontend dependencies
+```bash
+cd blog-frontend
+npm install
+```
 
-Distributed under the MIT License. See `LICENSE` for more information.
+### Run the frontend app
+
+```bash
+npm start
+```
+
+### Create .env file and include Auth0 App credentials
+
+Create a `.env` file as shown here:
+
+```
+touch .env
+```
+
+Open the file and paste the following code in it:
+
+```
+REACT_APP_AUTH0_CLIENT_ID=YOUR_AUTH0_CLIENT_ID
+REACT_APP_AUTH0_DOMAIN=YOUR_AUTH0_DOMAIN
+REACT_APP_AUTH0_AUDIENCE=YOUR_AUTH0_AUDIENCE
+REACT_APP_AUTH0_REDIRECT_URI=http://localhost:3000/callback
+REACT_APP_BASEURL=http://localhost:3000/
+```
+
+Replace `YOUR_AUTH0_CLIENT_ID`, `YOUR_AUTH0_DOMAIN` and `YOUR_AUTH0_AUDIENCE` placeholder with your Auth0 credentials.
+
+### Test the application
+Finally open your browser and view the application on http://localhost:3000
+
+## Prerequisites
+ [Node.js](https://nodejs.org/en/), [Yarn package manager](https://yarnpkg.com/lang/en/docs/install/#mac-stable), [MongoDB](https://docs.mongodb.com/v3.2/installation/) and [TypeScript](https://www.typescriptlang.org/)
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+## Built With
+[Nest.js]()
+[React.js]()
+[Auth0]() 
+[TypeScript]()
+[MongoDB]()
