@@ -53,7 +53,7 @@ AUTH0_DOMAIN=YOUR_DOMAIN
 AUTH0_AUDIENCE=YOUR_AUDIENCE
 ```
 
-Ensure that you replace the `YOUR_AUTH0_DOMAIN` and `YOUR_AUTH0_AUDIENCE` placeholder with the appropriate credentials as obtained from your Auth0 dashboard.
+Ensure that you replace the `YOUR_DOMAIN` and `YOUR_AUTH0_AUDIENCE` placeholder with the appropriate credentials as obtained from your API settings.
 
 
 ### MongoDB
@@ -76,7 +76,9 @@ This will start the backend application on port `5000`. This was modified to avo
 
 
 ## Frontend
-Open another terminal from the `nest-react-project` and navigate to the `orders` folder to setup the frontend
+```bash
+Open another terminal from the `nest-react-mongod` and navigate to the `orders` folder to setup the frontend
+```
 
 ### Frontend dependencies
 ```bash
@@ -87,7 +89,10 @@ npm install
 ### Run the frontend app
 
 ```bash
-npm start or yarn | Soon done with all installation please run $ make build then $ make run-demo
+npm start or yarn | 
+Please run $ make build 
+then $ make run-demo
+to deploy the frontend part of Orders Management
 ```
 
 ### Create .env file and include Auth0 App credentials
@@ -108,7 +113,7 @@ REACT_APP_AUTH0_REDIRECT_URI=http://localhost:3000/callback
 REACT_APP_BASEURL=http://localhost:3000/
 ```
 
-Replace `YOUR_AUTH0_CLIENT_ID`, `YOUR_AUTH0_DOMAIN` and `YOUR_AUTH0_AUDIENCE` placeholder with your Auth0 credentials.
+Replace `YOUR_CLIENT_ID`, `YOUR_DOMAIN` and `YOUR_AUDIENCE` placeholder with your API credentials.
 
 ### Test the application
 Finally open your browser and view the application on http://localhost:3000
