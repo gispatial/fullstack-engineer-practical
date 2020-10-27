@@ -117,7 +117,48 @@ REACT_APP_BASEURL=http://localhost:3000/
 Replace `YOUR_CLIENT_ID`, `YOUR_DOMAIN` and `YOUR_AUDIENCE` placeholder with your API credentials.
 
 ### Test the application
+```bash
 Finally open your browser and view the application on http://localhost:3000
+```
+### Testing Your Changes In Your App
+```bash
+Using yarn link, you can have your project use a local checkout of the react-admn package instead of npm. This allows you to test react-admin changes in your app:
+```
+
+### Register your frontend orders as a linkable package
+```bash
+cd /code/path/to/orders/packages/react-admin && yarn link
+```
+### Replace the npm-installed version with a symlink to your local version 
+```bash
+cd /code/path/to/myapp/ && yarn link react-admin
+If you run into issues with React red-screen, then you need to register your app's version of React as a linkable package 
+cd /code/path/to/myapp/node_modules/react && yarn link
+And then replace the npm-installed version of React with a symlink to your app's node_modules version
+cd /code/path/to/react-admin/ && yarn link react
+```
+### Rebuild the packages with the same version of React
+```bash
+cd /code/path/to/react-admin/ && make build
+```
+
+Return to your app and ensure all dependencies have resolved 
+```bash
+$ cd /code/path/to/myapp/ && yarn install
+
+Start your app
+yarn start
+Automated Tests
+Automated tests are also crucial in our development process. You can run all the tests (linting, unit and functional tests) by calling:
+
+make test
+Unit tests use jest, so you should be able to run a subset of tests, or run tests continuously on change, by passing options to
+
+yarn jest
+Besides, tests related to the modified files are ran automatically at commit using a git pre-commit hook. This means you won't be able to commit your changes if they break the tests.
+
+When working on the end to end tests, you can leverage cypress runner by starting the simple example yourself (make run-simple or yarn run-simple) and starting cypress in another terminal (make test-e2e-local or yarn test-e2e-local).
+```
 
 ## Prerequisites
  [Node.js](https://nodejs.org/en/), [Yarn package manager](https://yarnpkg.com/lang/en/docs/install/#mac-stable), [MongoDB](https://docs.mongodb.com/v3.2/installation/) and [TypeScript](https://www.typescriptlang.org/)
@@ -129,3 +170,5 @@ Finally open your browser and view the application on http://localhost:3000
 [Auth0]() 
 [TypeScript]()
 [MongoDB]()
+
+#### This Assessment is up by R. Aidy your down to earth senior grade 4 full stack frontend engineer (Malaysian)
