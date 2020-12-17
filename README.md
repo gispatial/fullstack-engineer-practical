@@ -83,7 +83,7 @@ Open another terminal from the `nest-react-mongod` and navigate to the `orders` 
 
 ### Frontend dependencies
 ```bash
-cd orders
+cd ./orders-management-frontend
 npm install
 ```
 
